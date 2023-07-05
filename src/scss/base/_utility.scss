@@ -1,0 +1,27 @@
+@use "../abstracts/colours" as colour;
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bg-lightgrey {
+    background-color: colour.$lightgrey;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-white {
+    color: colour.$white;
+}
+
+.text-red {
+    color: colour.$primary;
+}
+
+.text-dark {
+    color: colour.$dark;
+}

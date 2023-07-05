@@ -1,0 +1,108 @@
+@use "../abstracts/colours" as colour;
+@use "../abstracts/breakpoints" as bp;
+
+
+.expertise {
+    padding: 6rem 0 2rem;
+
+    &__left {
+        margin-bottom: 6rem;
+    }
+
+    &__para {
+        line-height: 1.8;
+        margin-bottom: 6.2rem;
+    }
+
+    &__group {
+
+        a {
+            color: colour.$grey;
+            font-size: 2.1rem;
+            margin-bottom: 1.6rem;
+            letter-spacing: .05rem;
+            position: relative;
+
+            &:hover {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -3.7rem;
+                    transform: translateY(-50%);
+                    background-color: colour.$grey;
+                    border-radius: 5rem;
+                    height: 2.4rem;
+                    width: 2.4rem;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 48%;
+                    right: -3rem;
+                    background-color: none;
+                    height: 0.7rem;
+                    width: 0.8rem;
+                    border-bottom: .2rem solid white;
+                    border-right: .2rem solid white;
+                    transform: rotate(-45deg) translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &__group-list {
+        margin-bottom: 4rem;
+
+        li {
+            margin-bottom: 1.6rem;
+        }
+    }
+}
+
+@media (min-width: bp.$md){
+    .expertise {
+        &__groups {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (min-width: bp.$lg){
+    .expertise {
+        display: flex;
+        padding: 6rem 0;
+
+
+        &__left {
+            width: 50%;
+            margin-bottom: 0;
+
+            div {
+                max-width: 447px;
+            }
+        }
+
+        &__right {
+            width: 50%;
+            padding-left: 5rem;
+        }
+
+        &__groups {
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+        &__group {
+            margin-right: 5rem;
+        }
+    }
+}
+
+@media (min-width: bp.$xl){
+    .expertise {
+        padding: 17rem 0;
+    }
+}

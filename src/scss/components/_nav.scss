@@ -1,0 +1,143 @@
+@use "../abstracts/colours" as colour;
+@use "../abstracts/breakpoints" as bp;
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 0;
+    width: 100%;
+    z-index: 2;
+    // background-color: colour.$white;
+
+    &__logo {
+        max-width: 40vw;
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    &__wrapper {
+        max-width: 154rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &__nav-item {
+        color: colour.$white;
+        margin-right: 6.5rem;
+        position: relative;
+
+
+        &:hover::after,
+        &.active::after {
+            content: "";
+            position: absolute;
+            bottom: -.5rem;
+            left: 0;
+            width: 100%;
+            background-color: colour.$white;
+            height: .3rem;
+        }
+    }
+     
+    &__burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        height: 4rem;
+        width: 5rem;
+        
+        &.expanded {
+            .nav__burger-line {
+                
+                &--1 {
+                    transform: rotate(46deg);
+                }
+                
+                &--2 {
+                    opacity: 0;
+                }
+                
+                &--3 {
+                    transform: rotate(-46deg);
+                }
+            }
+        }
+    }
+    
+    &__burger-line {
+        width: 100%;
+        height: .3rem;
+        background-color: colour.$grey;
+        transition: all 1s ease;
+        transform-origin: left;
+    }
+
+    &__mob-nav {
+        display: flex;
+        opacity: 0;
+        position: fixed;
+        background-color: white;
+        left: 0;
+        top: 8.9rem;
+        height: calc(100vh - 8.9rem);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-1000px);
+        transition: all .6s ease;
+        
+        &.show {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    &__mob-nav-item {
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media (min-width: bp.$sm){
+    .nav {
+
+        &__mob-nav {
+            top: 12rem;
+            height: calc(100vh - 12rem);
+        }
+    
+        &__mob-nav-item {
+            margin-bottom: 3rem;
+
+            a {
+                font-size: 2.4rem;
+            }
+        }
+    
+    }
+}
+
+@media (min-width: bp.$xl){
+    .nav {
+
+        &__nav {
+            display: flex;
+        }
+
+        &__burger {
+            display: none;
+        }
+    
+    }
+}
