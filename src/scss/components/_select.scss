@@ -1,0 +1,9 @@
+@use "../abstracts/colours" as colour;
+
+select {
+    border: 2px solid colour.$black;
+}
+
+option {
+    
+}

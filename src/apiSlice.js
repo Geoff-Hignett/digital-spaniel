@@ -3,12 +3,12 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const apiSlice = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
-    tagTypes: ['Testimonials'],
+    tagTypes: ['Recent Projects'],
     endpoints: (builder) => ({
       getTestimonials: builder.query({
-        query: () => '/testimonials',
+        query: () => '/recentProjects',
         transformResponse: (res) => res.reverse(),
-        providesTags: ['Testimonials'],
+        providesTags: ['Recent Projects'],
       }),
     }),
   });

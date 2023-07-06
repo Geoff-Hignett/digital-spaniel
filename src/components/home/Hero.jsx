@@ -23,7 +23,7 @@ const Hero = () => {
                                 develop brands with personality and resonance.
                             </p>
                         </div>
-                        <Link className="btn-primary" to="/">
+                        <Link className="link" to="/">
                             Lets' talk
                         </Link>
                     </div>

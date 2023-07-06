@@ -41,7 +41,7 @@ const Expertise = () => {
                                 <h1><span className="text-dark">What are<br /></span>we capable of</h1>
                                 <p className="expertise__para"> By focusing on design as an enabler and putting a huge emphasis on our clients as co-producers, we create innovative, sustainable marketing that enhances brand experience and user engagement.</p>
                             </div>
-                            <Link className="btn-primary" to="/">
+                            <Link className="link" to="/">
                                 Our process
                             </Link>
                         </div>

@@ -1,25 +1,44 @@
 {
-    "testimonials": [
+    "recentProjects": [
         {
             "id": 1,
-            "author": "Paul Simon",
-            "title": "Founder, MegaCorp",
-            "testimonial": "Working with Digital Spaniel has been a breath of fresh air. Their approach and attitude kept me informed and included from the start. Super pleased with the end results too!",
-            "img": "paul"
-        },  
+            "name": "Big Boots",
+            "description": "The coolest brand in the world of boots.",
+            "imgFolder": "big-boots",
+            "imgType": "single",
+            "categories": ["Branding", "Web Design"]
+        },
         {
             "id": 2,
-            "author": "Johnny B. Goode",
-            "title": "CEO, Getting Things Done",
-            "testimonial": "Advice and support from DigiSpan was second to none. Always willing to help and offer advice and solutions. A very good and rapid understanding of our requirements was key to this.",
-            "img": "johnny"
-        },  
+            "name": "Make Ideas Happen",
+            "description": "A local paper with big ideas needed. A sharp new brand to inspire readers.",
+            "imgFolder": "make-ideas",
+            "imgType": "single",
+            "categories": ["Web Design", "Digital Marketing"]
+        },
         {
             "id": 3,
-            "author": "Mary Jane",
-            "title": "CEO, Design Matters",
-            "testimonial": "We needed a creative and unique brand which could compete against established products. Digital Spaniel delivered in spades and we’ve seen a huge response to the product launch.",
-            "img": "mary"
+            "name": "Dinamo",
+            "description": "Fast-growing publication available with free trial.",
+            "imgFolder": "dinamo",
+            "imgType": "double",
+            "categories": ["Branding", "Digital Marketing"]
+        },
+        {
+            "id": 4,
+            "name": "Pick n Mix Tuna",
+            "description": "A successful food start up based in Birmingham.",
+            "imgFolder": "tuna",
+            "imgType": "single",
+            "categories": ["Branding", "Web Design", "Digital Marketing"]
+        },
+        {
+            "id": 5,
+            "name": "Nulego",
+            "description": "Immersive experience with online play and real-world integration.",
+            "imgFolder": "nulego",
+            "imgType": "single",
+            "categories": ["Branding", "Digital Marketing"]
         }
     ]
 }

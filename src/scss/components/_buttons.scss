@@ -1,6 +1,6 @@
 @use "../abstracts/colours" as colour;
 
-.btn-primary {
+.link {
     position: relative;
     color: colour.$dark;
 
@@ -17,5 +17,13 @@
     &:hover::after {
         -webkit-animation: slide-out-in;
         animation: slide-out-in 0.8s;
+    }
+
+    &--white {
+        color: colour.$white;
+
+        &::after {
+            background-color: colour.$white;
+        }
     }
 }

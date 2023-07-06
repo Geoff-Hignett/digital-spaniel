@@ -15,6 +15,13 @@ h1 {
     line-height: 1.2;
 }
 
+h4 {
+    font-family: $headerfont;
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+    line-height: 1.5;
+}
+
 h5 {
     font-family: $headerfont;
     color: colour.$dark;
@@ -33,7 +40,7 @@ p {
     margin-bottom: 2rem;
 }
 
-a {
+a, button, label, option, select {
     font-family: $bodyfont;
     font-weight: 600;
     font-size: 2rem;
