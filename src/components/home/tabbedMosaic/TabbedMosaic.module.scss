@@ -1,0 +1,208 @@
+@use "../../../scss/abstracts/colours" as colour;
+@use "../../../scss/abstracts/breakpoints" as bp;
+
+.tabbed_mosaic {
+    &__selectors {
+        display: none;
+    }
+
+    &__select_mob {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+
+        select {
+            border: 2px solid colour.$black;
+            background: url(/img/icon/down-arrow.png) no-repeat 95% 50%;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            padding: .5rem;
+        }
+    }
+
+    &__label {
+        margin-bottom: 15px;
+    }
+
+    &__grid_item {
+        position: relative;
+        width: 100%;
+        height: 28rem;
+        margin-bottom: 3rem;
+        cursor: pointer;
+
+        &:hover {
+            .tabbed_mosaic__grid_overlay,
+            .tabbed_mosaic__grid_item_content {
+                display: block;
+            }
+        }
+    }
+
+    &__grid_overlay {
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.4962359943977591) 73%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        border-radius: 1rem;
+        display: none;
+    }
+
+    &__grid_item_content {
+        position: absolute;
+        bottom: 1.9rem;
+        left: 1.9rem;
+        z-index: 3;
+        display: none;
+
+        h4 {
+            color: colour.$white;
+        }
+
+        p {
+            color: colour.$white;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__grid_img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    &__switches {
+        display: none;
+    }
+
+    &__switch {
+        height: 6.4rem;
+        width: 6.4rem;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 48%;
+            height: 2rem;
+            width: 2rem;
+            transform: rotate(45deg) translateY(-50%);
+        }
+        
+        &__left {
+            background-color: #a7b1b9;
+            
+            &::after {
+                left: 28%;
+                border-left: 2px solid colour.$grey;
+                border-bottom: 2px solid colour.$grey;
+            }
+        }
+
+        &__right {
+            background-color: colour.$dark;
+            margin-left: 3.2rem;
+
+            &::after {
+                right: 47%;
+                border-right: 2px solid colour.$white;
+                border-top: 2px solid colour.$white;
+            }
+        }
+    }
+
+}
+
+@media (min-width: bp.$sm){
+    .tabbed_mosaic {
+        &__grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__grid_item {
+            width: 48%;
+        }
+    }
+}
+
+@media (min-width: bp.$md){
+    .tabbed_mosaic {
+        &__select_mob {
+            display: none;
+        }
+
+        &__selectors {
+            display: flex;
+            margin-bottom: 6rem;
+            position: relative;
+        }
+
+        &__selector {
+            width: 19rem;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1rem;
+                width: 100%;
+                height: 1px;
+                background-color: colour.$dark;   
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1.1rem;
+                width: 0%;
+                height: 3px;
+                background-color: colour.$primary;   
+                transition: width 1s ease;
+            }
+        }
+
+        &__selector_active {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        &__switches {
+            display: flex;
+        }
+    }
+}
+
+@media (min-width: bp.$lg){
+    .tabbed_mosaic {
+        &__grid_item {
+            width: 32%;
+
+            &__double {
+                width: 66%;
+            }
+        }
+    }
+}
+

@@ -5,7 +5,6 @@
             "name": "Big Boots",
             "description": "The coolest brand in the world of boots.",
             "imgFolder": "big-boots",
-            "imgType": "single",
             "categories": ["Branding", "Web Design"]
         },
         {
@@ -13,7 +12,6 @@
             "name": "Make Ideas Happen",
             "description": "A local paper with big ideas needed. A sharp new brand to inspire readers.",
             "imgFolder": "make-ideas",
-            "imgType": "single",
             "categories": ["Web Design", "Digital Marketing"]
         },
         {
@@ -21,15 +19,13 @@
             "name": "Dinamo",
             "description": "Fast-growing publication available with free trial.",
             "imgFolder": "dinamo",
-            "imgType": "double",
-            "categories": ["Branding", "Digital Marketing"]
+            "categories": ["Branding", "Web Design", "Digital Marketing"]
         },
         {
             "id": 4,
             "name": "Pick n Mix Tuna",
             "description": "A successful food start up based in Birmingham.",
             "imgFolder": "tuna",
-            "imgType": "single",
             "categories": ["Branding", "Web Design", "Digital Marketing"]
         },
         {
@@ -37,7 +33,6 @@
             "name": "Nulego",
             "description": "Immersive experience with online play and real-world integration.",
             "imgFolder": "nulego",
-            "imgType": "single",
             "categories": ["Branding", "Digital Marketing"]
         }
     ]

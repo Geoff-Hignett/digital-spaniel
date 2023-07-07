@@ -1,0 +1,33 @@
+@use "../abstracts/colours" as colour;
+
+.link {
+    position: relative;
+    color: colour.$dark;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: colour.$primary;
+        width: 100%;
+        height: .3rem;
+    }
+
+    &:hover::after {
+        -webkit-animation: slide-out-in;
+        animation: slide-out-in 0.8s;
+    }
+
+    &--white {
+        color: colour.$white;
+
+        &::after {
+            background-color: colour.$white;
+        }
+    }
+
+    &:visited {
+        opacity: 0.5;
+    }
+}

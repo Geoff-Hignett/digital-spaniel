@@ -1,20 +1,12 @@
 // import abstracts
-// @use "./scss/abstracts/colours" as *;
+@use "./scss/abstracts/colours" as *;
 @use "./scss/abstracts/breakpoints" as *;
 
 // import components
-@use "./scss/components/nav" as *;
-@use "./scss/components/hero" as *;
-@use "./scss/components/expertise" as *;
-@use "./scss/components/buttons" as *;
-@use "./scss/components/testimonials" as *;
-@use "./scss/components/tabbed" as *;
-@use "./scss/components/select" as *;
+@use "./scss/components/links" as *;
 
 // import base
 @use "./scss/base/reset" as *;
 @use "./scss/base/typography" as *;
 @use "./scss/base/utility" as *;
 @use "./scss/base/animations" as *;
-
-

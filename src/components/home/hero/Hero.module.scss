@@ -1,0 +1,102 @@
+@use "../../../scss/abstracts/colours" as colour;
+@use "../../../scss/abstracts/breakpoints" as bp;
+
+.hero {
+    position: relative;
+    margin-top: 16rem;
+
+    &__wrapper {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__left {
+        margin-bottom: 7rem;
+    }
+
+    &__para {
+        line-height: 1.8;
+        margin-bottom: 6.2rem;
+    }
+
+    &__right {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            max-height: 100vh;
+        }
+    }
+
+    &__right_mob {
+        width: 100%;
+    }
+
+    &__prehead {
+        margin-bottom: 5.5rem;
+        text-transform: uppercase;
+        color: colour.$primary;
+    }
+}
+
+@media (min-width: bp.$sm){
+    .hero {
+
+        &__left {
+            width: 50%;
+        }
+
+        &__right_mob {
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            width: 40%;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media (min-width: bp.$lg){
+    .hero {
+        margin-top: 0;
+        height: 100vh;
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        &__left {
+            width: 50%;
+            margin-bottom: 0;
+
+            div {
+                max-width: 447px;
+            }
+        }
+
+        &__right {
+            display: block;
+            width: 50%;
+            left: auto;
+            right: 0;
+
+            img {
+                display: block;
+                height: 100vh;
+                object-fit: cover;
+            }
+        }
+
+        &__right_mob {
+            display: none;
+        }
+
+    }
+}
