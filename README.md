@@ -5,6 +5,9 @@ This project was bootstrapped with [Vite](https://vitejs.dev/).
 
 In the project directory, you can run:
 
+### `npm install` followed by `cd digital-spaniel`
+Installs project dependencies and enters project root
+
 ### `npm run start`
 Runs the app in development mode whilst json-server is being used (it is currently being used)
 
